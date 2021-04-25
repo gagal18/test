@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React, { useRef, useState } from 'react';
 import './App.css';
 
@@ -11,7 +13,9 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-const firebaseConfig = {
+
+// Initialize Firebase
+firebase.initializeApp({
   apiKey: "AIzaSyD5kCQ45ZQow1XzwLYhKlkJmlToSrTLb6o",
   authDomain: "to-do-app-185e7.firebaseapp.com",
   projectId: "to-do-app-185e7",
@@ -19,10 +23,7 @@ const firebaseConfig = {
   messagingSenderId: "170170787788",
   appId: "1:170170787788:web:3008453f9cbc84eb959f69",
   measurementId: "G-GT4YZLPTWF"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+});
 
 
 const auth = firebase.auth();
